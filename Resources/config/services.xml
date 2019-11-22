@@ -26,7 +26,7 @@
         <service id="dpn_xml_sitemap.manager" class="%dpn_xml_sitemap.manager.class%">
             <argument>%dpn_xml_sitemap.defaults%</argument>
             <argument>%dpn_xml_sitemap.max_per_sitemap%</argument>
-            <argument type="service" id="templating" />
+            <argument type="service" id="twig" />
         </service>
         <service id="dpn_xml_sitemap.route_option_generator" class="%dpn_xml_sitemap.route_option_generator.class%" public="false">
             <argument type="service" id="router" />

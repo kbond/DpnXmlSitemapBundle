@@ -11,7 +11,7 @@
 
 namespace Dpn\XmlSitemapBundle\Sitemap;
 
-use Symfony\Component\Templating\EngineInterface;
+use Twig\Environment;
 
 /**
  * Sitemap manager class
@@ -42,16 +42,16 @@ class SitemapManager
     protected $generators = array();
 
     /**
-     * @var EngineInterface
+     * @var Environment
      */
     protected $templating;
 
     /**
-     * @param array           $defaults
-     * @param int             $maxPerSitemap
-     * @param EngineInterface $templating
+     * @param array       $defaults
+     * @param int         $maxPerSitemap
+     * @param Environment $templating
      */
-    public function __construct(array $defaults, $maxPerSitemap, EngineInterface $templating)
+    public function __construct(array $defaults, $maxPerSitemap, Environment $templating)
     {
         $this->defaults = array_merge(
             array(
