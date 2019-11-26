@@ -149,7 +149,7 @@ class SitemapManager
         $entries = null === $number ? $this->getSitemapEntries() : $this->getEntriesForSitemap($number);
 
         return $this->templating->render(
-            'DpnXmlSitemapBundle::sitemap.xml.twig',
+            '@DpnXmlSitemap/sitemap.xml.twig',
             array(
                 'entries' => $entries,
                 'default_priority' => Entry::normalizePriority($this->defaults['priority']),
@@ -166,7 +166,7 @@ class SitemapManager
     public function renderSitemapIndex($host)
     {
         return $this->templating->render(
-            'DpnXmlSitemapBundle::sitemap_index.xml.twig',
+            '@DpnXmlSitemap/sitemap_index.xml.twig',
             array(
                 'num_sitemaps' => $this->getNumberOfSitemaps(),
                 'host' => $host,

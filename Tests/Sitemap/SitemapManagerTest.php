@@ -94,7 +94,7 @@ class SitemapManagerTest extends \PHPUnit_Framework_TestCase
         $templating
             ->shouldReceive('render')
             ->twice()
-            ->with('DpnXmlSitemapBundle::sitemap.xml.twig', m::type('array'))
+            ->with('@DpnXmlSitemap/sitemap.xml.twig', m::type('array'))
             ->andReturn('rendered template');
 
         $manager = new SitemapManager(array(), 1, $templating);
@@ -110,7 +110,7 @@ class SitemapManagerTest extends \PHPUnit_Framework_TestCase
         $templating
             ->shouldReceive('render')
             ->once()
-            ->with('DpnXmlSitemapBundle::sitemap_index.xml.twig', array('num_sitemaps' => 2, 'host' => 'http://localhost'))
+            ->with('@DpnXmlSitemap/sitemap_index.xml.twig', array('num_sitemaps' => 2, 'host' => 'http://localhost'))
             ->andReturn('rendered template');
 
         $manager = new SitemapManager(array(), 1, $templating);
