@@ -21,8 +21,14 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('dpn_xml_sitemap');
+        $treeBuilder = new TreeBuilder('dpn_xml_sitemap');
+
+        // Keep compatibility with symfony/config < 4.2
+        if (\method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->getRootNode();
+        } else {
+            $rootNode = $treeBuilder->root('dpn_xml_sitemap');
+        }
 
         $rootNode
             ->children()
