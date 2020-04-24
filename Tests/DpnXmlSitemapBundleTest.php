@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Dpn\XmlSitemapBundle\Tests\Sitemap;
+namespace Dpn\XmlSitemapBundle\Tests;
 
 use Dpn\XmlSitemapBundle\DpnXmlSitemapBundle;
 use Mockery as m;

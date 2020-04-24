@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Dpn\XmlSitemapBundle\Tests\Sitemap\DependencyInjection\Compiler;
+namespace Dpn\XmlSitemapBundle\Tests\DependencyInjection\Compiler;
 
 use Dpn\XmlSitemapBundle\DependencyInjection\Compiler\GeneratorCompilerPass;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;

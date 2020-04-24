@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Dpn\XmlSitemapBundle\Tests\Sitemap\DependencyInjection;
+namespace Dpn\XmlSitemapBundle\Tests\DependencyInjection;
 
 use Dpn\XmlSitemapBundle\DependencyInjection\DpnXmlSitemapExtension;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
