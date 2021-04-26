@@ -86,7 +86,7 @@ class DumpCommand extends Command
                 $this->manager->renderSitemap()
             );
 
-            return;
+            return 0;
         }
 
         for ($i = 1; $i <= $totalSitemaps; $i++) {
@@ -96,6 +96,8 @@ class DumpCommand extends Command
                 $this->manager->renderSitemap($i)
             );
         }
+
+        return 0;
     }
 
     /**
