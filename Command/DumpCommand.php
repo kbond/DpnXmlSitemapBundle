@@ -26,13 +26,13 @@ class DumpCommand extends Command
 {
     private $manager;
     private $router;
-    private $kernelRootDir;
+    private $projectDir;
 
-    public function __construct(SitemapManager $manager, RouterInterface $router, $kernelRootDir)
+    public function __construct(SitemapManager $manager, RouterInterface $router, $projectDir)
     {
         $this->manager = $manager;
         $this->router = $router;
-        $this->kernelRootDir = $kernelRootDir;
+        $this->projectDir = $projectDir;
 
         parent::__construct();
     }
@@ -56,7 +56,7 @@ class DumpCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $host = $input->getArgument('host');
-        $target = rtrim($input->getOption('target') ?: sprintf('%s/../web', $this->kernelRootDir), '/');
+        $target = rtrim($input->getOption('target') ?: sprintf('%s/web', $this->projectDir), '/');
 
         if (!is_dir($target)) {
             throw new \InvalidArgumentException(sprintf('The directory "%s" does not exist.', $target));

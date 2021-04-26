@@ -20,7 +20,7 @@
         <service id="dpn_xml_sitemap.dump_command" class="%dpn_xml_sitemap.dump_command.class%">
             <argument type="service" id="dpn_xml_sitemap.manager" />
             <argument type="service" id="router" />
-            <argument>%kernel.root_dir%</argument>
+            <argument>%kernel.project_dir%</argument>
             <tag name="console.command" />
         </service>
         <service id="dpn_xml_sitemap.manager" class="%dpn_xml_sitemap.manager.class%">
